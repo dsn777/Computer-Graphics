@@ -1,0 +1,53 @@
+﻿  main.cpp
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\laba4\main.cpp(15,24): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\laba4\main.cpp(16,28): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\laba4\main.cpp(16,21): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\laba4\main.cpp(20,21): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\laba4\main.cpp(21,25): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\laba4\main.cpp(21,21): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\laba4\main.cpp(88,12): warning C4305: инициализация: усечение из "double" в "float"
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\laba4\main.cpp(112,67): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\laba4\main.cpp(112,45): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\laba4\main.cpp(113,67): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\laba4\main.cpp(113,45): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+  laba4.vcxproj -> C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\laba4\Debug\laba4.exe
