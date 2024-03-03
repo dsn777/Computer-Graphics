@@ -1,0 +1,54 @@
+﻿  main.cpp
+C:\Users\rev93\Desktop\laba 2\lab2\main.cpp(13,22): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\laba 2\lab2\main.cpp(13,18): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\laba 2\lab2\main.cpp(14,28): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\laba 2\lab2\main.cpp(14,22): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\laba 2\lab2\main.cpp(18,22): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\laba 2\lab2\main.cpp(18,18): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\laba 2\lab2\main.cpp(19,26): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\laba 2\lab2\main.cpp(19,18): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\laba 2\lab2\main.cpp(36,41): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+C:\Users\rev93\Desktop\laba 2\lab2\main.cpp(45,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\rev93\Desktop\laba 2\lab2\main.cpp(121,19): warning C4244: =: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\laba 2\lab2\main.cpp(122,19): warning C4244: =: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+  lab2.vcxproj -> C:\Users\rev93\Desktop\laba 2\lab2\Debug\lab2.exe

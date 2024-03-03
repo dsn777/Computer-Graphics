@@ -1,0 +1,212 @@
+package com.example.demo;
+
+
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Line;
+import javafx.stage.Stage;
+import javafx.scene.layout.Pane;
+import javafx.util.Duration;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class Vertex {
+    public double x;
+    public double y;
+
+    public static Vertex mult(Vertex a, double scalar) {
+        return new Vertex(a.x * scalar, a.y * scalar);
+    }
+
+    public static Vertex plus(Vertex a, Vertex b) {
+        return new Vertex(a.x + b.x, a.y + b.y);
+    }
+
+    Vertex(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+}
+
+class bezierCurve {
+    private List<Line> drawLines;
+
+    private void setDrawLines(List<Vertex> drawPoints, double OX, double OY) {
+        drawLines = new ArrayList<>();
+        for (int i = 0; i < drawPoints.size() - 1; i++) {
+            Vertex a = drawPoints.get(i),
+                    b = drawPoints.get(i + 1);
+            drawLines.add(new Line(OX + a.x, OY - a.y, OX + b.x, OY - b.y));
+        }
+    }
+
+    bezierCurve(List<Vertex> P, int drawPointsSize, double OX, double OY) {
+        List<Vertex> drawPoints = new ArrayList<>();
+
+        Vertex pushingPoint;
+        double tStep = 1d / (drawPointsSize - 1);
+        for (double t = 0; t <= 1 + 1e-3; t += tStep) {
+            pushingPoint = Vertex.mult(P.get(0), (1 - t) * (1 - t) * (1 - t));
+            pushingPoint = Vertex.plus(pushingPoint, Vertex.mult(P.get(1), 3 * t * (1 - t) * (1 - t)));
+            pushingPoint = Vertex.plus(pushingPoint, Vertex.mult(P.get(2), 3 * t * t * (1 - t)));
+            pushingPoint = Vertex.plus(pushingPoint, Vertex.mult(P.get(3), t * t * t));
+
+            drawPoints.add(pushingPoint);
+        }
+
+        setDrawLines(drawPoints, OX, OY);
+    }
+
+    public List<Line> getLines(double OX, double OY) {
+        return drawLines;
+    }
+}
+
+class compBezier {
+    List<Line> totalLines;
+
+    compBezier(List<Vertex> P, double OX, double OY) {
+        Vertex p2, p3;
+
+        totalLines = new ArrayList<>();
+        int offset = 0;
+        for (int i = 2; i < P.size(); i += (2 + offset)) {
+            p2 = P.get(i);
+            p3 = P.get(i + 1);
+            P.add(i + 1, new Vertex((p2.x + p3.x) / 2, (p2.y + p3.y) / 2));
+            offset++;
+        }
+
+        bezierCurve bezC = new bezierCurve(P.subList(0, 4), 100, OX, OY);
+        totalLines.addAll(bezC.getLines(OX, OY));
+
+        bezC = new bezierCurve(P.subList(3, 7), 100, OX, OY);
+        totalLines.addAll(bezC.getLines(OX, OY));
+    }
+
+    public List<Line> getTotalLines() {
+        return totalLines;
+    }
+}
+
+public class HelloApplication extends Application {
+    private final int WIDTH = 800;
+    private final int HEIGHT = 600;
+    private final int OX = 10;
+    private final int OY = 590;
+    private final Line OXLine = new Line(OX, OY, WIDTH - OX, OY);
+    private final Line OYLine = new Line(OX, OY, OX, HEIGHT - OY);
+    
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+
+        //Pane root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        Pane root = new Pane();
+        Vertex p0 = new Vertex(10, 10);
+        Vertex p1 = new Vertex(100, 500);
+        Vertex p2 = new Vertex(200, 400);
+        Vertex p3 = new Vertex(300, 100);
+        Vertex p4 = new Vertex(450, 130);
+        Vertex p5 = new Vertex(500, 400);
+        // Vertex p6 = new Vertex(700, 250);
+
+
+        Circle mcirclep0 = new Circle(OX + p0.x, OY - p0.y, 10); mcirclep0.setFill(Color.WHITE);
+        Circle mcirclep1 = new Circle(OX + p1.x, OY - p1.y, 10);
+        Circle mcirclep2 = new Circle(OX + p2.x, OY - p2.y, 10);
+        Circle mcirclep3 = new Circle(OX + p3.x, OY - p3.y, 10);
+        Circle mcirclep4 = new Circle(OX + p4.x, OY - p4.y, 10);
+        Circle mcirclep5 = new Circle(OX + p5.x, OY - p5.y, 10);
+
+
+        Circle circlep0 = new Circle(OX + p0.x, OY - p0.y, 2); circlep0.setFill(Color.RED);
+        Circle circlep1 = new Circle(OX + p1.x, OY - p1.y, 2);
+        Circle circlep2 = new Circle(OX + p2.x, OY - p2.y, 2);
+        Circle circlep3 = new Circle(OX + p3.x, OY - p3.y, 2);
+        Circle circlep4 = new Circle(OX + p4.x, OY - p4.y, 2);
+        Circle circlep5 = new Circle(OX + p5.x, OY - p5.y, 2);
+
+        mcirclep0.setOnMouseDragged((MouseEvent event) -> {
+            mcirclep0.setCenterX(event.getX());
+            mcirclep0.setCenterY(event.getY());
+            circlep0.setCenterX(event.getX());
+            circlep0.setCenterY(event.getY());
+            p0.x = circlep0.getCenterX() - OX;
+            p0.y = -(circlep1.getCenterY() - OY);
+
+
+            List<Vertex> refPoints = new ArrayList<>();
+            refPoints.add(p0);
+            refPoints.add(p1);
+            refPoints.add(p2);
+            refPoints.add(p3);
+            refPoints.add(p4);
+            refPoints.add(p5);
+            compBezier bigCurveDope = new compBezier(refPoints, OX, OY);
+            root.getChildren().addAll(bigCurveDope.getTotalLines());
+            root.requestLayout();
+        });
+
+        root.getChildren().addAll(mcirclep0, mcirclep1, mcirclep2, mcirclep3, mcirclep4, mcirclep5);
+        root.getChildren().addAll(circlep0, circlep1, circlep2, circlep3, circlep4, circlep5);
+
+        List<Vertex> refPoints = new ArrayList<>();
+        refPoints.add(p0);
+        refPoints.add(p1);
+        refPoints.add(p2);
+        refPoints.add(p3);
+        refPoints.add(p4);
+        refPoints.add(p5);
+        //refPoints.add(p6);
+
+
+        compBezier bigCurve = new compBezier(refPoints, OX, OY);
+
+        List<Line> curveLines = bigCurve.getTotalLines();
+
+
+        root.getChildren().addAll(curveLines);
+        root.getChildren().addAll(OXLine, OYLine);
+
+        Scene scene = getScene(root, circlep0);
+
+    //    Scene scene = new Scene(root, WIDTH, HEIGHT);
+
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Кривая Безье");
+        primaryStage.show();
+    }
+
+    private Scene getScene(Pane root, Circle circlep0) {
+        Scene scene = new Scene(root, WIDTH, HEIGHT);
+        scene.setOnKeyPressed(e -> {
+            switch (e.getCode()) {
+                case UP:
+                    circlep0.setCenterY(circlep0.getCenterY() - 50);
+                    break;
+                case DOWN:
+                    circlep0.setCenterY(circlep0.getCenterY() + 50);
+                    break;
+                case LEFT:
+                    circlep0.setCenterX(circlep0.getCenterX() - 50);
+                    break;
+                case RIGHT:
+                    circlep0.setCenterX(circlep0.getCenterX() + 50);
+                    break;
+            }
+        });
+        return scene;
+    }
+
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
