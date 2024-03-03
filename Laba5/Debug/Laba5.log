@@ -1,0 +1,125 @@
+﻿  main.cpp
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(15,24): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(16,28): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(16,21): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(20,21): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(21,25): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(21,21): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(26,27): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(27,31): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(28,39): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(64,51): warning C4244: аргумент: преобразование "_Ty" в "T", возможна потеря данных
+          with
+          [
+              _Ty=double
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(64,40): warning C4244: аргумент: преобразование "_Ty" в "T", возможна потеря данных
+          with
+          [
+              _Ty=double
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(64,29): warning C4244: аргумент: преобразование "_Ty" в "T", возможна потеря данных
+          with
+          [
+              _Ty=double
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(94,27): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(114,34): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(115,40): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(115,28): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(116,28): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(118,31): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(119,40): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(119,31): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(120,46): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(120,37): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(120,28): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(121,37): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(121,28): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(182,47): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\main.cpp(192,27): warning C4018: <: несоответствие типов со знаком и без знака
+  Laba5.vcxproj -> C:\Users\rev93\Desktop\ЛЭТИ\6 семестр\Компьютерная графика\Laba5\Debug\Laba5.exe
